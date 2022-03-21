@@ -24,7 +24,7 @@ async function init() {
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
   webcam = new tmImage.Webcam(400, 400, flip, "environment"); // width, height, flip
-  await webcam.setup({facingMode: "user"}); // request access to the webcam
+  await webcam.setup({ facingMode: "environment" }); // request access to the webcam
   await webcam.play();
   window.requestAnimationFrame(loop);
 
