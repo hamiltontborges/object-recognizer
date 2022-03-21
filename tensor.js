@@ -7,7 +7,7 @@ const URL = "https://teachablemachine.withgoogle.com/models/Q8e5cUQ3Q/";
 let model, webcam, labelContainer, maxPredictions;
 
 const btn = document.getElementById('btn');
-const colunaObjetos = document.getElementById('coluna-objetos')
+const colunaObjetos = document.getElementById('coluna-objetos');
 
 // Load the image model and setup the webcam
 async function init() {
@@ -23,7 +23,7 @@ async function init() {
 
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
-  webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
+  webcam = new tmImage.Webcam(400, 400, flip); // width, height, flip
   await webcam.setup(); // request access to the webcam
   await webcam.play();
   window.requestAnimationFrame(loop);
@@ -49,9 +49,7 @@ async function predict() {
   // predict can take in an image, video or canvas html element
   const prediction = await model.predict(webcam.canvas);
   for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction =
-      // prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-      prediction[i].className;
+    const classPrediction = prediction[i].className;
     labelContainer.childNodes[i].innerHTML = classPrediction;
     if(prediction[i].probability > 0.95) {
       labelContainer.childNodes[i].classList.add("ativo")
@@ -63,6 +61,6 @@ async function predict() {
 
 const changeBtnCamera = () => {
   btn.disabled = true;
-  btn.innerHTML = "Câmera ligada";
   btn.classList.add('desativado');
 }
+
