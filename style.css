@@ -35,6 +35,9 @@ canvas {
 }
 
 .coluna-objetos .list-obj div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: rgb(206, 206, 206);
     font-size: 1.2rem;
     width: 300px;
@@ -87,6 +90,16 @@ canvas {
     background-color: rgb(107, 107, 107) !important;
 }
 
+@media only screen and (max-width: 420px) {
+    .coluna-objetos .list-obj div {
+        line-height: 15px;
+        font-size: 0.9rem;
+        width: auto;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+}
+
 @media only screen and (max-width: 960px)
 {
     .coluna-objetos .list-obj {
@@ -95,13 +108,10 @@ canvas {
     }
 
     .coluna-objetos .list-obj div {
-        color: rgb(206, 206, 206);
         font-size: 0.9rem;
         width: auto;
         margin: 10px;
         padding: 5px 10px;
-        border: 1px solid rgb(141, 141, 141);
-        border-radius: 5px;
     }
 
     canvas {
