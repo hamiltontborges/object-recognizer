@@ -9,9 +9,8 @@ html {
 }
 
 body {
-    height: 100vh;
     border: 0px;
-    background-image: url('https://www.pngmagic.com/product_images/website-background-image-size-psd-vector-photo.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
 }
 
