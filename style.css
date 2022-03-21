@@ -91,26 +91,26 @@ canvas {
 }
 
 @media only screen and (max-width: 420px) {
+
     .coluna-objetos .list-obj div {
         line-height: 15px;
         font-size: 0.9rem;
-        width: auto;
-        margin: 10px;
         padding: 5px 10px;
     }
 }
 
-@media only screen and (max-width: 960px)
+@media only screen and (max-width: 992px)
 {
     .coluna-objetos .list-obj {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .coluna-objetos .list-obj div {
         font-size: 0.9rem;
         width: auto;
-        margin: 10px;
+        margin: 5px;
         padding: 5px 10px;
     }
 
