@@ -86,3 +86,35 @@ canvas {
 .desativado {
     background-color: rgb(107, 107, 107) !important;
 }
+
+@media (max-width: 960px)
+{
+    .coluna-objetos .list-obj {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .coluna-objetos .list-obj div {
+        color: rgb(206, 206, 206);
+        font-size: 0.9rem;
+        width: auto;
+        margin: 10px;
+        padding: 5px 10px;
+        border: 1px solid rgb(141, 141, 141);
+        border-radius: 5px;
+    }
+
+    canvas {
+        width: 300px;
+        height: 300px;
+    }
+
+    .webcam {
+        width: 300px;
+        height: 300px;
+    }
+
+    p {
+        font-size: 0.9rem !important;
+    }
+}
